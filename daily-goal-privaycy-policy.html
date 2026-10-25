@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – Daily Goal Tracker</title>
+  <meta name="description" content="Privacy Policy for Daily Goal Tracker, an offline Android app for daily goals, streaks and badges. No accounts, no ads, no analytics and no internet access. All data stays on your device.">
+  <meta name="author" content="CREST HEALTH (PRIVATE) LIMITED">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#388E3C" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121512" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Daily Goal Tracker">
+  <meta property="og:title" content="Privacy Policy – Daily Goal Tracker">
+  <meta property="og:description" content="Daily Goal Tracker works fully offline. It collects no personal data, contains no ads, analytics or third-party SDKs, and keeps everything on your device.">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Privacy Policy – Daily Goal Tracker">
+  <meta name="twitter:description" content="No accounts, no ads, no analytics, no internet access. All data stays on your device.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%234CAF50'/%3E%3Cpath d='M19 33l9 9 17-19' fill='none' stroke='%23FFB300' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --green: #4CAF50;
+      --green-dark: #388E3C;
+      --green-soft: #E8F5E9;
+      --green-line: #C8E6C9;
+      --amber: #FF9800;
+      --amber-soft: #FFF3E0;
+
+      --bg: #F7F9F7;
+      --surface: #FFFFFF;
+      --text: #1C1F1C;
+      --text-muted: #5B635B;
+      --border: #E1E8E1;
+      --accent: var(--green-dark);
+      --accent-soft: var(--green-soft);
+      --shadow: 0 1px 2px rgba(20, 40, 20, .06), 0 6px 20px rgba(20, 40, 20, .06);
+
+      --radius: 16px;
+      --header-h: 64px;
+      --max: 1120px;
+      --font: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121512;
+        --surface: #1B1F1B;
+        --text: #E6EAE6;
+        --text-muted: #A4ADA4;
+        --border: #2C332C;
+        --accent: #81C784;
+        --accent-soft: #1F2B20;
+        --green-line: #2E4A30;
+        --amber-soft: #33270F;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 20px rgba(0, 0, 0, .25);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-h) + 16px);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.7 var(--font);
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    :focus-visible {
+      outline: 3px solid var(--amber);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -48px;
+      z-index: 100;
+      padding: 10px 16px;
+      background: var(--green-dark);
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: top .2s ease;
+    }
+    .skip-link:focus { top: 12px; }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: var(--header-h);
+      background: color-mix(in srgb, var(--surface) 88%, transparent);
+      backdrop-filter: saturate(160%) blur(12px);
+      -webkit-backdrop-filter: saturate(160%) blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .2s ease;
+    }
+    .site-header.is-scrolled { box-shadow: var(--shadow); }
+
+    .header-inner {
+      max-width: var(--max);
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -.01em;
+    }
+    .brand svg { flex: none; }
+
+    .nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+    }
+    .nav-toggle svg { width: 22px; height: 22px; }
+
+    .site-nav {
+      position: absolute;
+      top: var(--header-h);
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 8px 16px 16px;
+      display: none;
+    }
+    .site-nav.is-open { display: block; animation: drop .2s ease; }
+
+    .site-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 2px;
+    }
+    .site-nav a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .site-nav a:hover { background: var(--accent-soft); }
+
+    @media (min-width: 900px) {
+      .nav-toggle { display: none; }
+      .site-nav {
+        position: static;
+        display: block;
+        padding: 0;
+        background: none;
+        border: 0;
+        box-shadow: none;
+      }
+      .site-nav ul { display: flex; gap: 4px; }
+      .site-nav a { padding: 8px 12px; font-size: .95rem; }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      background:
+        radial-gradient(1200px 400px at 10% -10%, color-mix(in srgb, var(--green) 22%, transparent), transparent 70%),
+        radial-gradient(800px 300px at 100% 0%, color-mix(in srgb, var(--amber) 16%, transparent), transparent 70%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 16px 40px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 12px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: .85rem;
+      font-weight: 600;
+    }
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -.02em;
+    }
+    .hero .lede {
+      max-width: 680px;
+      margin: 0 0 20px;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--text-muted);
+      font-size: .95rem;
+    }
+    .meta strong { color: var(--text); font-weight: 600; }
+
+    /* ---------- Layout ---------- */
+    .layout {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+      display: grid;
+      gap: 32px;
+    }
+    @media (min-width: 1024px) {
+      .layout { grid-template-columns: 260px minmax(0, 1fr); align-items: start; }
+    }
+
+    /* Table of contents */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    @media (min-width: 1024px) {
+      .toc { position: sticky; top: calc(var(--header-h) + 24px); max-height: calc(100vh - var(--header-h) - 48px); overflow: auto; }
+    }
+    .toc h2 {
+      margin: 0 0 8px;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--text-muted);
+    }
+    .toc ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: toc;
+    }
+    .toc li { counter-increment: toc; }
+    .toc a {
+      display: flex;
+      gap: 10px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: .93rem;
+      line-height: 1.4;
+      border-left: 3px solid transparent;
+      transition: background .15s ease, color .15s ease, border-color .15s ease;
+    }
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      color: var(--text-muted);
+      opacity: .7;
+      font-variant-numeric: tabular-nums;
+    }
+    .toc a:hover { background: var(--accent-soft); color: var(--text); }
+    .toc a.is-active {
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-left-color: var(--green);
+      font-weight: 600;
+    }
+
+    /* ---------- Content ---------- */
+    .content { display: grid; gap: 24px; min-width: 0; }
+
+    .summary {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .summary li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+    .summary .icon {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    .summary .icon svg { width: 22px; height: 22px; }
+    .summary strong { display: block; line-height: 1.3; }
+    .summary span { display: block; color: var(--text-muted); font-size: .9rem; line-height: 1.45; margin-top: 2px; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      box-shadow: var(--shadow);
+    }
+    @media (min-width: 640px) { .card { padding: 32px; } }
+
+    .card h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 12px;
+      font-size: clamp(1.3rem, 3.5vw, 1.55rem);
+      line-height: 1.3;
+      letter-spacing: -.01em;
+    }
+    .card h2 .num {
+      flex: none;
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 8px;
+      padding: 2px 8px;
+      font-variant-numeric: tabular-nums;
+    }
+    .card h3 { margin: 20px 0 6px; font-size: 1.05rem; }
+    .card p { margin: 0 0 12px; }
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+    .card ul { margin: 0 0 12px; padding-left: 1.25rem; }
+    .card li { margin: 4px 0; }
+    .card li::marker { color: var(--green); }
+
+    .callout {
+      margin: 16px 0 0;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--green-line);
+      background: var(--accent-soft);
+    }
+    .callout.amber { border-color: color-mix(in srgb, var(--amber) 40%, transparent); background: var(--amber-soft); }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 8px 0 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    caption { text-align: left; padding: 12px 14px 0; color: var(--text-muted); font-size: .85rem; }
+    th, td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+    thead th { background: var(--accent-soft); font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); }
+    tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
+    tbody th { font-weight: 600; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .85em;
+      padding: 1px 6px;
+      border-radius: 6px;
+      background: var(--accent-soft);
+      word-break: break-word;
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin-top: 12px;
+    }
+    .contact-item {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg);
+    }
+    .contact-item .label {
+      display: block;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .contact-item .value { font-weight: 600; word-break: break-word; }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: .92rem;
+    }
+    .footer-inner p { margin: 0; }
+
+    /* ---------- Back to top ---------- */
+    .to-top {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 40;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 14px;
+      background: var(--green-dark);
+      color: #fff;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(12px);
+      pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .to-top.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+    .to-top svg { width: 22px; height: 22px; }
+
+    /* ---------- Motion ---------- */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    .no-js .reveal { opacity: 1; transform: none; }
+
+    @keyframes drop { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media print {
+      .site-header, .toc, .to-top, .skip-link { display: none !important; }
+      body { background: #fff; color: #000; }
+      .card, .summary li { box-shadow: none; break-inside: avoid; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .layout { display: block; }
+    }
+  </style>
+</head>
+<body class="no-js">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Daily Goal Tracker – back to top">
+        <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <circle cx="32" cy="32" r="30" fill="#4CAF50"/>
+          <circle cx="32" cy="32" r="20" fill="none" stroke="#E8F5E9" stroke-width="5"/>
+          <path d="M22 33l7 7 13-15" fill="none" stroke="#FFB300" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Daily Goal Tracker</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">Menu</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#summary">At a glance</a></li>
+          <li><a href="#information-we-collect">Information</a></li>
+          <li><a href="#permissions">Permissions</a></li>
+          <li><a href="#third-parties">Third parties</a></li>
+          <li><a href="#your-rights">Your rights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-inner">
+      <p class="eyebrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        Privacy Policy
+      </p>
+      <h1 id="page-title">Your goals stay on your device.</h1>
+      <p class="lede">Daily Goal Tracker is an offline app for tracking daily goals, streaks and badges. It has no accounts, no ads, no analytics and no internet access. This policy explains exactly what the app stores and why.</p>
+      <ul class="meta">
+        <li><strong>Effective date:</strong> <time datetime="2026-10-21">21 October 2026</time></li>
+        <li><strong>Last updated:</strong> <time datetime="2026-10-21">21 October 2026</time></li>
+        <li><strong>Publisher:</strong> CREST HEALTH (PRIVATE) LIMITED</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="layout">
+    <aside class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#information-we-collect">Information We Collect</a></li>
+        <li><a href="#how-information-is-used">How Information Is Used</a></li>
+        <li><a href="#permissions">App Permissions</a></li>
+        <li><a href="#third-parties">Third-Party Services &amp; SDKs</a></li>
+        <li><a href="#sharing">Data Sharing</a></li>
+        <li><a href="#backup">Android Backup &amp; Device Transfer</a></li>
+        <li><a href="#retention">Data Retention &amp; Deletion</a></li>
+        <li><a href="#security">Data Security</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#your-rights">Your Rights &amp; Choices</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact Information</a></li>
+      </ol>
+    </aside>
+
+    <main class="content" id="main" tabindex="-1">
+
+      <section id="summary" aria-labelledby="summary-title">
+        <h2 id="summary-title" class="visually-hidden">Privacy at a glance</h2>
+        <ul class="summary">
+          <li class="reveal">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M17 1H7C5.9 1 5 1.9 5 3v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14z"/></svg></span>
+            <div><strong>Stored only on your device</strong><span>Goals, progress and settings never leave your phone through the app.</span></div>
+          </li>
+          <li class="reveal">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M23.64 7c-.45-.34-4.93-4-11.64-4-1.5 0-2.89.19-4.15.48L18.18 13.8 23.64 7zm-6.6 8.22L3.27 1.44 2 2.72l2.05 2.06C1.91 5.76.59 6.82.36 7l11.63 14.49.01.01.01-.01 3.9-4.86 3.32 3.32 1.27-1.27-3.46-3.46z"/></svg></span>
+            <div><strong>No internet access</strong><span>The app does not request the Internet permission.</span></div>
+          </li>
+          <li class="reveal">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9A7.902 7.902 0 0 1 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1A7.902 7.902 0 0 1 20 12c0 4.42-3.58 8-8 8z"/></svg></span>
+            <div><strong>No ads, analytics or tracking</strong><span>No advertising, analytics, crash-reporting or tracking SDKs.</span></div>
+          </li>
+          <li class="reveal">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></span>
+            <div><strong>No account needed</strong><span>No sign-in, no email, no personal profile.</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card reveal" id="introduction" aria-labelledby="h-introduction">
+        <h2 id="h-introduction"><span class="num">01</span> Introduction</h2>
+        <p>This Privacy Policy applies to the <strong>Daily Goal Tracker</strong> Android application (the “App”), published by <strong>CREST HEALTH (PRIVATE) LIMITED</strong> (“we”, “us” or “our”).</p>
+        <p>The App helps you set daily goals that you can count (for example “Read 20 pages”) or simply mark as done, log your progress, build streaks, unlock achievement badges and review your progress in charts, a history calendar and insights. A new day starts at midnight: your progress resets and the finished day is saved to your history.</p>
+        <p>The App is designed to work entirely offline. We do not operate any servers for the App, and we do not collect, receive, sell or share your personal information.</p>
+      </section>
+
+      <section class="card reveal" id="information-we-collect" aria-labelledby="h-collect">
+        <h2 id="h-collect"><span class="num">02</span> Information We Collect</h2>
+        <h3>Personal information</h3>
+        <p>We do <strong>not</strong> collect any personal information. The App does not ask for your name, email address, phone number, contacts, location, photos, files or any other identifying details, and it has no sign-in or account system.</p>
+
+        <h3>Information stored on your device</h3>
+        <p>To work, the App saves the following information in its private storage on your device. It is never sent to us or to anyone else by the App.</p>
+        <div class="table-wrap">
+          <table>
+            <caption>Data the App keeps locally</caption>
+            <thead>
+              <tr><th scope="col">Data</th><th scope="col">Examples</th><th scope="col">Why</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Goals</th><td>Name, goal type, target, unit, category, icon, today's progress, streaks, creation time</td><td>To show and track your goals</td></tr>
+              <tr><th scope="row">Goal history</th><td>For each finished day: each goal's target, amount achieved and whether it was completed</td><td>History calendar, streaks and insights charts</td></tr>
+              <tr><th scope="row">Daily summaries</th><td>Number of goals, number completed and completion percentage per day</td><td>Progress charts and statistics</td></tr>
+              <tr><th scope="row">Badges</th><td>Which achievement badges are unlocked and when</td><td>The badges screen and celebrations</td></tr>
+              <tr><th scope="row">Settings &amp; app state</th><td>Theme, whether onboarding was completed, the last day the app was active, the last time it was opened, number of goals created</td><td>Starting a new day, preferences and badge rules</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Device and non-personal information</h3>
+        <p>The App does not collect device identifiers, advertising IDs, IP addresses, usage statistics or crash reports, and it does not use cookies or similar tracking technologies.</p>
+      </section>
+
+      <section class="card reveal" id="how-information-is-used" aria-labelledby="h-use">
+        <h2 id="h-use"><span class="num">03</span> How Information Is Used</h2>
+        <p>The information stored on your device is used only to provide the App's features, on your device:</p>
+        <ul>
+          <li>Displaying your goals and today's progress.</li>
+          <li>Saving each finished day to your history and resetting progress when a new day starts.</li>
+          <li>Calculating streaks, completion rates and the charts shown in Insights and History.</li>
+          <li>Deciding when an achievement badge should unlock.</li>
+          <li>Remembering your settings, such as the theme.</li>
+        </ul>
+        <p>We do not use your information for advertising, profiling or any automated decision-making.</p>
+      </section>
+
+      <section class="card reveal" id="permissions" aria-labelledby="h-permissions">
+        <h2 id="h-permissions"><span class="num">04</span> App Permissions</h2>
+        <p>The App does not request any device permissions. It cannot access your camera, microphone, location, contacts, files or notifications, and it does <strong>not</strong> have the Internet permission.</p>
+      </section>
+
+      <section class="card reveal" id="third-parties" aria-labelledby="h-third">
+        <h2 id="h-third"><span class="num">05</span> Third-Party Services &amp; SDKs</h2>
+        <p>The App contains <strong>no</strong> third-party SDKs for advertising, analytics, crash reporting, authentication, payments, cloud storage or AI, and it does not use Firebase or any other online service.</p>
+        <p>It is built only with Google's Android Jetpack (AndroidX) and Material Components libraries and the Kotlin standard libraries, which run on your device and do not collect data.</p>
+        <h3>Links that open other apps</h3>
+        <p>Some options in Settings hand you over to another app. Once you leave the App, that app's own privacy policy applies:</p>
+        <ul>
+          <li><strong>Rate Us</strong> opens the App's page in the Google Play Store app or in your browser.</li>
+          <li><strong>Share App</strong> opens your device's share menu with a short message and a link to the App on Google Play. Nothing is sent unless you choose an app and send it yourself.</li>
+          <li><strong>Privacy Policy</strong> opens this page in your browser.</li>
+        </ul>
+      </section>
+
+      <section class="card reveal" id="sharing" aria-labelledby="h-sharing">
+        <h2 id="h-sharing"><span class="num">06</span> Data Sharing</h2>
+        <p>We do not sell, rent, trade or share your information with anyone. Because the App has no internet access and we run no servers, your goal data is never transmitted to us or to any third party by the App.</p>
+      </section>
+
+      <section class="card reveal" id="backup" aria-labelledby="h-backup">
+        <h2 id="h-backup"><span class="num">07</span> Android Backup &amp; Device Transfer</h2>
+        <p>The App supports Android's built-in backup. If you have turned on backup in your device settings, Android may include the App's data (your goals, history, badges and settings) in your device backup to your Google Account. It can also copy this data to a new phone when you transfer your data to it.</p>
+        <p>This feature is controlled by you in your device settings and handled by Google under the <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a>. We have no access to these backups.</p>
+      </section>
+
+      <section class="card reveal" id="retention" aria-labelledby="h-retention">
+        <h2 id="h-retention"><span class="num">08</span> Data Retention &amp; Deletion</h2>
+        <p>Your data stays on your device for as long as you keep the App installed, or until you delete it. You can remove it at any time:</p>
+        <ul>
+          <li><strong>Clear All Data</strong> (Settings → Data) permanently deletes all your goals, history and daily summaries. Your settings and unlocked badges are kept.</li>
+          <li><strong>Delete a goal</strong> by swiping it away on the Home screen.</li>
+          <li><strong>Uninstalling the App</strong>, or clearing its storage in Android Settings, removes everything, including settings and badges.</li>
+        </ul>
+        <p class="callout">Copies inside an Android device backup are kept and deleted under your Google Account settings, not by the App.</p>
+      </section>
+
+      <section class="card reveal" id="security" aria-labelledby="h-security">
+        <h2 id="h-security"><span class="num">09</span> Data Security</h2>
+        <p>Your data is stored in the App's private storage, which Android's app sandbox protects from other apps. Because the App never transmits your data over a network, it cannot be intercepted in transit or exposed through a server breach.</p>
+        <p>Keeping your device protected with a screen lock and up-to-date software helps keep this information safe.</p>
+      </section>
+
+      <section class="card reveal" id="children" aria-labelledby="h-children">
+        <h2 id="h-children"><span class="num">10</span> Children's Privacy</h2>
+        <p>The App does not knowingly collect personal information from anyone, including children under the age of 13. Because no personal information is collected or transmitted, no information from children is received by us.</p>
+      </section>
+
+      <section class="card reveal" id="your-rights" aria-labelledby="h-rights">
+        <h2 id="h-rights"><span class="num">11</span> Your Rights &amp; Choices</h2>
+        <p>Because we do not collect or hold any of your data, there is nothing for us to access, correct, export or delete on your behalf. You stay in full control on your own device:</p>
+        <ul>
+          <li>View and edit your goals at any time in the App.</li>
+          <li>Delete your goals and history with Clear All Data, or remove everything by uninstalling the App.</li>
+          <li>Turn Android backup on or off in your device settings.</li>
+        </ul>
+        <p>If you have any questions about your privacy, please contact us using the details below.</p>
+      </section>
+
+      <section class="card reveal" id="changes" aria-labelledby="h-changes">
+        <h2 id="h-changes"><span class="num">12</span> Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time, for example if the App's features change. Any changes will be posted on this page with an updated “Last updated” date. If a future version of the App starts handling data differently, this policy will be updated before that version is released.</p>
+      </section>
+
+      <section class="card reveal" id="contact" aria-labelledby="h-contact">
+        <h2 id="h-contact"><span class="num">13</span> Contact Information</h2>
+        <p>If you have any questions or concerns about this Privacy Policy or the App, please contact us:</p>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span class="label">Company</span>
+            <span class="value">CREST HEALTH (PRIVATE) LIMITED</span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Email</span>
+            <a class="value" href="mailto:cresthealthycare@gmail.com?subject=Daily%20Goal%20Tracker%20Privacy">cresthealthycare@gmail.com</a>
+          </div>
+        </div>
+        <p class="callout amber" style="margin-top:16px">Effective date: <time datetime="2026-10-21">21 October 2026</time></p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year">2026</span> CREST HEALTH (PRIVATE) LIMITED. All rights reserved.</p>
+      <p><a href="mailto:cresthealthycare@gmail.com">cresthealthycare@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+  </button>
+
+  <script>
+    (function () {
+      'use strict';
+      document.body.classList.remove('no-js');
+
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      var toTop = document.querySelector('.to-top');
+
+      // Footer year
+      var year = document.getElementById('year');
+      if (year) year.textContent = String(new Date().getFullYear());
+
+      // Mobile navigation
+      function setNav(open) {
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+      }
+      toggle.addEventListener('click', function () {
+        setNav(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setNav(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+          setNav(false);
+          toggle.focus();
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (nav.classList.contains('is-open') && !header.contains(e.target)) setNav(false);
+      });
+
+      // Move focus to the target section after in-page navigation (keyboard and screen reader users).
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href^="#"]');
+        if (!link) return;
+        var id = link.getAttribute('href').slice(1);
+        var target = id && document.getElementById(id);
+        if (!target || id === 'top') return;
+        if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+        window.setTimeout(function () { target.focus({ preventScroll: true }); }, reduceMotion ? 0 : 400);
+      });
+
+      // Header shadow and back-to-top button
+      function onScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        header.classList.toggle('is-scrolled', y > 8);
+        toTop.classList.toggle('is-visible', y > 600);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      toTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+        document.getElementById('main').focus({ preventScroll: true });
+      });
+
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+
+      // Reveal sections as they scroll into view
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
+
+      // Highlight the current section in the table of contents
+      var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+      var byId = {};
+      tocLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+      var visible = {};
+      var spyObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) { visible[entry.target.id] = entry.isIntersecting; });
+        var current = null;
+        for (var i = 0; i < tocLinks.length; i++) {
+          var id = tocLinks[i].getAttribute('href').slice(1);
+          if (visible[id]) { current = id; break; }
+        }
+        if (!current) return;
+        tocLinks.forEach(function (a) {
+          var active = a === byId[current];
+          a.classList.toggle('is-active', active);
+          if (active) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+        });
+      }, { rootMargin: '-' + (64 + 24) + 'px 0px -55% 0px', threshold: 0 });
+      Object.keys(byId).forEach(function (id) {
+        var section = document.getElementById(id);
+        if (section) spyObserver.observe(section);
+      });
+    })();
+  </script>
+</body>
+</html>
